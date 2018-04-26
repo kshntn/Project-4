@@ -7,12 +7,12 @@ public class Songs {
     private int releaseYear;
     private String genre;
 
-    public Songs(String vsongName, int vimageResourceId,String vartist,int vreleaseYear,String vgenre) {
+    public Songs(String vsongName, int vimageResourceId, String vartist, int vreleaseYear, String vgenre) {
         songName = vsongName;
         imageResourceId = vimageResourceId;
-        artist=vartist;
-        releaseYear=vreleaseYear;
-        genre=vgenre;
+        artist = vartist;
+        releaseYear = vreleaseYear;
+        genre = vgenre;
     }
 
     public String getSongName() {

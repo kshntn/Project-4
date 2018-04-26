@@ -8,6 +8,7 @@ import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
     Intent songNameActivity;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -33,17 +34,17 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         switch (view.getId()) {
             case R.id.English:
                 songNameActivity = new Intent(MainActivity.this, SongsActivity.class);
-                songNameActivity.putExtra("lang","English");
+                songNameActivity.putExtra("lang", "English");
                 startActivity(songNameActivity);
                 break;
             case R.id.Hindi:
                 songNameActivity = new Intent(MainActivity.this, SongsActivity.class);
-                songNameActivity.putExtra("lang","Hindi");
+                songNameActivity.putExtra("lang", "Hindi");
                 startActivity(songNameActivity);
                 break;
             case R.id.Tamil:
                 songNameActivity = new Intent(MainActivity.this, SongsActivity.class);
-                songNameActivity.putExtra("lang","Tamil");
+                songNameActivity.putExtra("lang", "Tamil");
                 startActivity(songNameActivity);
                 break;
         }

@@ -17,11 +17,13 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="English" />
+
     <Button
         android:id="@+id/Hindi"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Hindi" />
+
     <Button
         android:id="@+id/Tamil"
         android:layout_width="wrap_content"

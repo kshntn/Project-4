@@ -24,12 +24,10 @@ public class SongsActivity extends AppCompatActivity {
             Song.add(new Songs("Shape Of You", R.drawable.shape_of_you, "Ed Sheeran", 2017, "Pop"));
 //        Song.add(new Songs("Hello From The Other Side", R.drawable.hello));
 //        Song.add(new Songs("Lovers on the Sun", R.drawable.david_guetta));
-        }
-        else if (Language.equals("Hindi")) {
+        } else if (Language.equals("Hindi")) {
             setTitle("Hindi Songs");
             Song.add(new Songs("Manwa Laage", R.drawable.manwalaage, "Arijit Singh & Shreya Ghoshal", 2014, " Filmi"));
-        }
-        else if (Language.equals("Tamil")) {
+        } else if (Language.equals("Tamil")) {
             setTitle("Tamil Songs");
             Song.add(new Songs("Pistah", R.drawable.pistah, "Shabareesh Varma", 2013, " indian pop"));
         }
