@@ -12,22 +12,25 @@ import java.util.ArrayList;
 
 public class SongsActivity extends AppCompatActivity {
     String Language;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_first);
         Language = getIntent().getStringExtra("lang");
         final ArrayList<Songs> Song = new ArrayList<>();
-        if(Language.equals("English") ){
+        if (Language.equals("English")) {
+            setTitle("English Songs");
             Song.add(new Songs("Shape Of You", R.drawable.shape_of_you, "Ed Sheeran", 2017, "Pop"));
 //        Song.add(new Songs("Hello From The Other Side", R.drawable.hello));
 //        Song.add(new Songs("Lovers on the Sun", R.drawable.david_guetta));
         }
-        if(Language.equals("Hindi")){
+        else if (Language.equals("Hindi")) {
+            setTitle("Hindi Songs");
             Song.add(new Songs("Manwa Laage", R.drawable.manwalaage, "Arijit Singh & Shreya Ghoshal", 2014, " Filmi"));
         }
-
-        if(Language.equals("Tamil")){
+        else if (Language.equals("Tamil")) {
+            setTitle("Tamil Songs");
             Song.add(new Songs("Pistah", R.drawable.pistah, "Shabareesh Varma", 2013, " indian pop"));
         }
         SongAdapter itemadapter = new SongAdapter(this, Song);
@@ -39,18 +42,18 @@ public class SongsActivity extends AppCompatActivity {
         listView.setOnItemClickListener(new OnItemClickListener() {
             public void onItemClick(AdapterView<?> parent, View view,
                                     int position, long id) {
-                Songs selectedSong =(Songs) parent.getItemAtPosition(position);
+                Songs selectedSong = (Songs) parent.getItemAtPosition(position);
                 Intent details = new Intent(SongsActivity.this, DetailsActivity.class);
                 String song = selectedSong.getSongName();
-                int image=selectedSong.getImageResourceId();
-                String artist=selectedSong.getArtist();
-                int release=selectedSong.getReleaseYear();
-                String genre=selectedSong.getGenre();
-                details.putExtra("song",song);
-                details.putExtra("image",image);
-                details.putExtra("artist",artist);
-                details.putExtra("release",release);
-                details.putExtra("genre",genre);
+                int image = selectedSong.getImageResourceId();
+                String artist = selectedSong.getArtist();
+                int release = selectedSong.getReleaseYear();
+                String genre = selectedSong.getGenre();
+                details.putExtra("song", song);
+                details.putExtra("image", image);
+                details.putExtra("artist", artist);
+                details.putExtra("release", release);
+                details.putExtra("genre", genre);
                 startActivity(details);
             }
         });

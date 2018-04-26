@@ -7,7 +7,11 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context=".DetailsActivity">
-
+<Button
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:text="Home"/>
     <ImageView
         android:id="@+id/imageDetails"
         android:layout_width="match_parent"
@@ -32,5 +36,37 @@
         android:id="@+id/genre"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
+    <RelativeLayout
+        android:gravity="bottom"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent">
+        <ImageView
+            android:id="@+id/like"
+            android:layout_alignParentLeft="true"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:src="@drawable/like"/>
+        <ImageView
+            android:layout_toRightOf="@id/like"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:src="@drawable/previous"/>
+        <ImageView
+            android:layout_centerHorizontal="true"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:src="@drawable/play"/>
+        <ImageView
+            android:layout_toLeftOf="@id/dislike"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:src="@drawable/next"/>
+        <ImageView
+            android:id="@+id/dislike"
+            android:layout_alignParentRight="true"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:src="@drawable/dislike"/>
+    </RelativeLayout>
 
 </LinearLayout>
