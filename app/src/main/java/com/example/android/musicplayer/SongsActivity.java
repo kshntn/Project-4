@@ -23,6 +23,10 @@ public class SongsActivity extends AppCompatActivity {
 //        Song.add(new Songs("Hello From The Other Side", R.drawable.hello));
 //        Song.add(new Songs("Lovers on the Sun", R.drawable.david_guetta));
         }
+        if(Language.equals("Hindi")){
+            Song.add(new Songs("Manwa Laage", R.drawable.manwalaage, "Arijit Singh & Shreya Ghoshal", 2014, " Filmi"));
+        }
+
         if(Language.equals("Tamil")){
             Song.add(new Songs("Pistah", R.drawable.pistah, "Shabareesh Varma", 2013, " indian pop"));
         }
