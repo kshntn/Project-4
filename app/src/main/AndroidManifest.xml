@@ -17,8 +17,8 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".EnglishActivity"
-            android:label="English Songs" />
+            android:name=".SongsActivity"
+            android:label="Playlist" />
         <activity android:name=".DetailsActivity"
             android:label="Now Playing" />
     </application>
