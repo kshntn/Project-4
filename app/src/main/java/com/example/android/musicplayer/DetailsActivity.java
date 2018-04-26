@@ -13,15 +13,14 @@ public class DetailsActivity extends AppCompatActivity {
     TextView artistName;
     TextView release;
     TextView genres;
-    Intent details = getIntent();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_details);
-        name = details.getStringExtra("song");
-        image = details.getIntExtra("image",0);
+        name = getIntent().getStringExtra("song");
+        image = getIntent().getIntExtra("image",0);
         art=findViewById(R.id.imageDetails);
-        art.setImageResource(R.drawable.shape_of_you);
+        art.setImageResource(image);
         artistName=findViewById(R.id.artist);
         artistName.setText(name);
         release=findViewById(R.id.releaseYear);
