@@ -31,9 +31,12 @@ public class EnglishActivity extends AppCompatActivity {
         listView.setOnItemClickListener(new OnItemClickListener() {
             public void onItemClick(AdapterView<?> parent, View view,
                                     int position, long id) {
-                Songs name =(Songs) parent.getItemAtPosition(position);
+                Songs selectedSong =(Songs) parent.getItemAtPosition(position);
                 Intent details = new Intent(EnglishActivity.this, DetailsActivity.class);
+                String name = selectedSong.getSongName();
+                int image=selectedSong.getImageResourceId();
                 details.putExtra("song",name);
+                details.putExtra("image",image);
                 startActivity(details);
             }
         });

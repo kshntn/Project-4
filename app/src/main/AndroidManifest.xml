@@ -19,7 +19,8 @@
         <activity
             android:name=".EnglishActivity"
             android:label="English Songs" />
-        <activity android:name=".DetailsActivity"></activity>
+        <activity android:name=".DetailsActivity"
+            android:label="Now Playing" />
     </application>
 
 </manifest>

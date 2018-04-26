@@ -22,4 +22,16 @@ public class Songs {
     public int getImageResourceId() {
         return imageResourceId;
     }
+
+    public String getArtist() {
+        return artist;
+    }
+
+    public int getReleaseYear() {
+        return releaseYear;
+    }
+
+    public String getGenre() {
+        return genre;
+    }
 }
