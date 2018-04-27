@@ -20,13 +20,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         english.setOnClickListener(this);
         hindi.setOnClickListener(this);
         tamil.setOnClickListener(this);
-//        english.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                Intent songNameActivity = new Intent(MainActivity.this, SongsActivity.class);
-//                startActivity(songNameActivity);
-//            }
-//        });
     }
 
     @Override

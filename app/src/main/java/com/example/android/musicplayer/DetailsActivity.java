@@ -39,6 +39,7 @@ public class DetailsActivity extends AppCompatActivity {
             genre = "";
             ReleaseYear = 0;
         }
+        playButton = findViewById(R.id.play);
         Toast.makeText(this, getString(R.string.nowPlayingDisplay) + " " + songName, Toast.LENGTH_SHORT).show();
         art = findViewById(R.id.imageDetails);
         art.setImageResource(image);
@@ -59,11 +60,9 @@ public class DetailsActivity extends AppCompatActivity {
 
     public void play(View v) {
         if (flag == 0) {
-            playButton = findViewById(R.id.play);
             playButton.setImageResource(R.drawable.ic_play_arrow);
             flag = 1;
         } else if (flag == 1) {
-            playButton = findViewById(R.id.play);
             playButton.setImageResource(R.drawable.ic_pause);
             flag = 0;
             Toast.makeText(this, getString(R.string.nowPlayingDisplay) + " " + songName, Toast.LENGTH_SHORT).show();
