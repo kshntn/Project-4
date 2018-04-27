@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <dimen name="padding">16dp</dimen>
+    <dimen name="PlayImageSize">75dp</dimen>
     <dimen name="image_details_height">275dp</dimen>
     <dimen name="textSize">20sp</dimen>
+    <dimen name="songPadding">10dp</dimen>
+    <dimen name="width">120dp</dimen>
+    <dimen name="height">80dp</dimen>
 </resources>
