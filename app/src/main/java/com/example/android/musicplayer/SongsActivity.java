@@ -19,17 +19,17 @@ public class SongsActivity extends AppCompatActivity {
         setContentView(R.layout.activity_first);
         Language = getIntent().getStringExtra("lang");
         final ArrayList<Songs> Song = new ArrayList<>();
-        if (Language.equals("English")) {
-            setTitle("English Songs");
+        if (Language.equals(getString(R.string.english))) {
+            setTitle(getString(R.string.english_songs));
             Song.add(new Songs("Shape Of You", R.drawable.shape_of_you, "Ed Sheeran", 2017, "Pop"));
             Song.add(new Songs("Hello", R.drawable.hello, "Adele", 2015, "Soul"));
             Song.add(new Songs("Lovers on the Sun", R.drawable.david_guetta, "David Guetta", 2014, "Country"));
-        } else if (Language.equals("Hindi")) {
-            setTitle("Hindi Songs");
-            Song.add(new Songs("Manwa Laage", R.drawable.manwalaage, "Arijit Singh, Shreya Ghoshal", 2014, "Filmi"));
+        } else if (Language.equals(getString(R.string.hindi))) {
+            setTitle(getString(R.string.hindi_songs));
+            Song.add(new Songs("Manwa Laage", R.drawable.manwalaage, "Arijit Singh, Shreya Ghoshal", 2014, "Filmy"));
             Song.add(new Songs("Kala Chashma", R.drawable.kala_chasma, "Neha Kakkar, Badshah, Amar Arshi", 2016, "Filmy"));
-        } else if (Language.equals("Tamil")) {
-            setTitle("Tamil Songs");
+        } else if (Language.equals(getString(R.string.tamil))) {
+            setTitle(getString(R.string.tamil_songs));
             Song.add(new Songs("Nenjukkul Peidhidum", R.drawable.nenjukkul_peidhidum, "Hariharan", 2008, "SoundTrack"));
             Song.add(new Songs("Maacho", R.drawable.macho, "Sid Sriram, Shweta Mohan", 2017, "Filmy"));
             Song.add(new Songs("Halena", R.drawable.irumugan, "Abhay Jodhpurkar, Christopher Stanley", 2016, "Filmy"));
@@ -50,11 +50,11 @@ public class SongsActivity extends AppCompatActivity {
                 String artist = selectedSong.getArtist();
                 int release = selectedSong.getReleaseYear();
                 String genre = selectedSong.getGenre();
-                details.putExtra("song", song);
-                details.putExtra("image", image);
-                details.putExtra("artist", artist);
-                details.putExtra("release", release);
-                details.putExtra("genre", genre);
+                details.putExtra(getString(R.string.song), song);
+                details.putExtra(getString(R.string.image), image);
+                details.putExtra(getString(R.string.artist), artist);
+                details.putExtra(getString(R.string.release), release);
+                details.putExtra(getString(R.string.genre), genre);
                 startActivity(details);
             }
         });

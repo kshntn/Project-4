@@ -7,5 +7,21 @@
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
     </style>
-
+    <style name="defaultpadding">
+        <item name="android:padding">@dimen/padding</item>
+    </style>
+    <style name="detailsPadding">
+        <item name="android:paddingLeft">@dimen/padding</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+    <style name="sizes">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+    <style name="PlayImageSizes">
+        <item name="android:layout_width">@dimen/PlayImageSize</item>
+        <item name="android:layout_height">@dimen/PlayImageSize</item>
+        <item name="android:layout_alignParentBottom">true</item>
+    </style>
 </resources>

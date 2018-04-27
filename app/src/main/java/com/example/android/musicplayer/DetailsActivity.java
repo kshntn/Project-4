@@ -19,18 +19,26 @@ public class DetailsActivity extends AppCompatActivity {
     TextView artistName;
     TextView release;
     TextView genres;
-    int flag=0;
+    int flag = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_details);
-        songName = getIntent().getStringExtra("song");
-        artist = getIntent().getStringExtra("artist");
-        image = getIntent().getIntExtra("image", 0);
-        genre = getIntent().getStringExtra("genre");
-        ReleaseYear = getIntent().getIntExtra("release", 0);
-        Toast.makeText(this, "Now Playing: "+songName , Toast.LENGTH_SHORT).show();
+        if (getIntent().getExtras() != null) {
+            songName = getIntent().getStringExtra(getString(R.string.song));
+            artist = getIntent().getStringExtra(getString(R.string.artist));
+            image = getIntent().getIntExtra(getString(R.string.image), 0);
+            genre = getIntent().getStringExtra(getString(R.string.genre));
+            ReleaseYear = getIntent().getIntExtra(getString(R.string.release), 0);
+        } else {
+            songName = "";
+            artist = "";
+            image = 0;
+            genre = "";
+            ReleaseYear = 0;
+        }
+        Toast.makeText(this, "Now Playing: " + songName, Toast.LENGTH_SHORT).show();
         art = findViewById(R.id.imageDetails);
         art.setImageResource(image);
 
@@ -39,25 +47,26 @@ public class DetailsActivity extends AppCompatActivity {
 
 
         artistName = findViewById(R.id.artist);
-        artistName.setText("Artist  : "+artist);
+        artistName.setText(getString(R.string.artistDisplay) + " " + artist);
 
         release = findViewById(R.id.releaseYear);
-        release.setText("("+String.valueOf(ReleaseYear)+")");
+        release.setText("(" + String.valueOf(ReleaseYear) + ")");
 
         genres = findViewById(R.id.genre);
-        genres.setText("Genre : "+genre);
+        genres.setText(getString(R.string.genreDisplay) + " " + genre);
 
     }
-    public void play(View v){
-        if(flag==0) {
+
+    public void play(View v) {
+        if (flag == 0) {
             ImageView playButton = findViewById(R.id.play);
             playButton.setImageResource(R.drawable.ic_play_arrow);
-            flag=1;
-        }else if (flag==1){
+            flag = 1;
+        } else if (flag == 1) {
             ImageView playButton = findViewById(R.id.play);
             playButton.setImageResource(R.drawable.ic_pause);
-            flag=0;
-            Toast.makeText(this, "Now Playing: "+songName , Toast.LENGTH_SHORT).show();
+            flag = 0;
+            Toast.makeText(this, getString(R.string.nowPlayingDisplay) + " " + songName, Toast.LENGTH_SHORT).show();
         }
     }
 

@@ -1,3 +1,18 @@
 <resources>
     <string name="app_name">MusicPlayer</string>
+    <string name="select_your_language">Select your language</string>
+    <string name="english">English</string>
+    <string name="hindi">Hindi</string>
+    <string name="tamil">Tamil</string>
+    <string name="english_songs">English Songs</string>
+    <string name="hindi_songs">Hindi Songs</string>
+    <string name="tamil_songs">Tamil Songs</string>
+    <string name="song">song</string>
+    <string name="image">image</string>
+    <string name="artist">artist</string>
+    <string name="release">release</string>
+    <string name="genre">genre</string>
+    <string name="artistDisplay">Artist : </string>
+    <string name="genreDisplay">Genre : </string>
+    <string name="nowPlayingDisplay">Now Playing:</string>
 </resources>

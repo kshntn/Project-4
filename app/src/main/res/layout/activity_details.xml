@@ -1,96 +1,82 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/list2"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     tools:context=".DetailsActivity">
-    <!--<Button-->
-    <!--android:layout_width="wrap_content"-->
-    <!--android:layout_height="wrap_content"-->
-    <!--android:layout_gravity="center"-->
-    <!--android:text="Home"/>-->
-    <ImageView
-        android:id="@+id/imageDetails"
-        android:layout_width="match_parent"
-        android:layout_height="275dp"
-        android:scaleType="fitXY" />
 
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/imageDetails"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/image_details_height"
+            android:scaleType="fitXY" />
+
+        <LinearLayout
+            style="@style/detailsPadding"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/name"
+                style="@style/sizes"
+                android:textSize="@dimen/textSize" />
+
+            <TextView
+                android:id="@+id/releaseYear"
+                style="@style/sizes" />
+
+        </LinearLayout>
+
 
         <TextView
-            android:id="@+id/name"
+            android:id="@+id/artist"
+            style="@style/detailsPadding" />
+
+        <TextView
+            android:id="@+id/genre"
+            style="@style/detailsPadding" />
+
+        <RelativeLayout
+            style="@style/defaultpadding"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="28dp" />
+            android:gravity="bottom">
 
-        <TextView
-            android:id="@+id/releaseYear"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            <ImageView
+                android:id="@+id/like"
+                style="@style/PlayImageSizes"
+                android:layout_alignParentLeft="true"
+                android:src="@drawable/ic_action_like" />
+
+            <ImageView
+                style="@style/PlayImageSizes"
+                android:layout_toRightOf="@id/like"
+                android:src="@drawable/ic_navigate_before" />
+
+            <ImageView
+                android:id="@+id/play"
+                style="@style/PlayImageSizes"
+                android:layout_centerHorizontal="true"
+                android:onClick="play"
+                android:src="@drawable/ic_pause" />
+
+            <ImageView
+                style="@style/PlayImageSizes"
+                android:layout_toLeftOf="@id/dislike"
+                android:src="@drawable/ic_navigate_next" />
+
+            <ImageView
+                android:id="@+id/dislike"
+                style="@style/PlayImageSizes"
+                android:layout_alignParentRight="true"
+                android:src="@drawable/ic_action_dontlike" />
+        </RelativeLayout>
 
     </LinearLayout>
-
-
-    <TextView
-        android:id="@+id/artist"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
-
-
-    <TextView
-        android:id="@+id/genre"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
-
-    <RelativeLayout
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        android:gravity="bottom">
-
-        <ImageView
-            android:id="@+id/like"
-            android:layout_width="75dp"
-            android:layout_height="75dp"
-            android:layout_alignParentBottom="true"
-            android:layout_alignParentLeft="true"
-            android:src="@drawable/ic_action_like" />
-
-        <ImageView
-            android:layout_width="75dp"
-            android:layout_height="75dp"
-            android:layout_alignParentBottom="true"
-            android:layout_toRightOf="@id/like"
-            android:src="@drawable/ic_navigate_before" />
-
-        <ImageView
-            android:layout_width="75dp"
-            android:layout_height="75dp"
-            android:id="@+id/play"
-            android:onClick="play"
-            android:layout_alignParentBottom="true"
-            android:layout_centerHorizontal="true"
-            android:src="@drawable/ic_pause" />
-
-        <ImageView
-            android:layout_width="75dp"
-            android:layout_height="75dp"
-            android:layout_alignParentBottom="true"
-            android:layout_toLeftOf="@id/dislike"
-            android:src="@drawable/ic_navigate_next" />
-
-        <ImageView
-            android:id="@+id/dislike"
-            android:layout_width="75dp"
-            android:layout_height="75dp"
-            android:layout_alignParentBottom="true"
-            android:layout_alignParentRight="true"
-            android:src="@drawable/ic_action_dontlike" />
-    </RelativeLayout>
-
-</LinearLayout>
+</ScrollView>

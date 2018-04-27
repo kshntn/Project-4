@@ -6,30 +6,27 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="@drawable/background"
+    style="@style/defaultpadding"
     tools:context=".MainActivity">
 
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        style="@style/sizes"
         android:textColor="@android:color/white"
-        android:text="Select your language" />
+        android:text="@string/select_your_language" />
 
     <Button
         android:id="@+id/English"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="English" />
+        style="@style/sizes"
+        android:text="@string/english" />
 
     <Button
         android:id="@+id/Hindi"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hindi" />
+        style="@style/sizes"
+        android:text="@string/hindi" />
 
     <Button
         android:id="@+id/Tamil"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Tamil" />
+        style="@style/sizes"
+        android:text="@string/tamil" />
 
 </LinearLayout>
