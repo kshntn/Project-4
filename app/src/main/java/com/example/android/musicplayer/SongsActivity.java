@@ -22,14 +22,15 @@ public class SongsActivity extends AppCompatActivity {
         if (Language.equals("English")) {
             setTitle("English Songs");
             Song.add(new Songs("Shape Of You", R.drawable.shape_of_you, "Ed Sheeran", 2017, "Pop"));
-//        Song.add(new Songs("Hello From The Other Side", R.drawable.hello));
-//        Song.add(new Songs("Lovers on the Sun", R.drawable.david_guetta));
+        Song.add(new Songs("Hello", R.drawable.hello,"Adele",2015,"Soul"));
+        Song.add(new Songs("Lovers on the Sun", R.drawable.david_guetta,"David Guetta",2014,"Country"));
         } else if (Language.equals("Hindi")) {
             setTitle("Hindi Songs");
-            Song.add(new Songs("Manwa Laage", R.drawable.manwalaage, "Arijit Singh & Shreya Ghoshal", 2014, " Filmi"));
+            Song.add(new Songs("Manwa Laage", R.drawable.manwalaage, "Arijit Singh & Shreya Ghoshal", 2014, "Filmi"));
+        Song.add(new Songs("Kala Chashma",R.drawable.kala_chasma,"Neha Kakkar, Badshah, Amar Arshi",2016,"Filmy"));
         } else if (Language.equals("Tamil")) {
             setTitle("Tamil Songs");
-            Song.add(new Songs("Pistah", R.drawable.pistah, "Shabareesh Varma", 2013, " indian pop"));
+            Song.add(new Songs("Nenjukkul Peidhidum", R.drawable.nenjukkul_peidhidum, "Hariharan", 2008, "SoundTrack"));
         }
         SongAdapter itemadapter = new SongAdapter(this, Song);
 
