@@ -15,4 +15,26 @@
     <string name="artistDisplay">Artist : </string>
     <string name="genreDisplay">Genre : </string>
     <string name="nowPlayingDisplay">Now Playing:</string>
+    <string name="shape_of_you">Shape Of You</string>
+    <string name="ed_sheeran">Ed Sheeran</string>
+    <string name="pop">Pop</string>
+    <string name="hello">Hello</string>
+    <string name="adele">Adele</string>
+    <string name="soul">Soul</string>
+    <string name="lovers">Lovers on the Sun</string>
+    <string name="david">David Guetta</string>
+    <string name="country">Country</string>
+    <string name="manwaLaage">Manwa Laage</string>
+    <string name="arjit">Arijit Singh, Shreya Ghoshal</string>
+    <string name="filmy">Filmy</string>
+    <string name="kala">Kala Chashma</string>
+    <string name="neha">Neha Kakkar, Badshah, Amar Arshi</string>
+    <string name="nenjukul">Nenjukkul Peidhidum</string>
+    <string name="hariharan">Hariharan</string>
+    <string name="soundtrack">SoundTrack</string>
+    <string name="maacho">Maacho</string>
+    <string name="sid">Sid Sriram, Shweta Mohan</string>
+    <string name="abhay">Abhay Jodhpurkar, Christopher Stanley</string>
+    <string name="halena">Halena</string>
+    <string name="language">lang</string>
 </resources>

@@ -17,22 +17,22 @@ public class SongsActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_first);
-        Language = getIntent().getStringExtra("lang");
+        Language = getIntent().getStringExtra(getString(R.string.language));
         final ArrayList<Songs> Song = new ArrayList<>();
         if (Language.equals(getString(R.string.english))) {
             setTitle(getString(R.string.english_songs));
-            Song.add(new Songs("Shape Of You", R.drawable.shape_of_you, "Ed Sheeran", 2017, "Pop"));
-            Song.add(new Songs("Hello", R.drawable.hello, "Adele", 2015, "Soul"));
-            Song.add(new Songs("Lovers on the Sun", R.drawable.david_guetta, "David Guetta", 2014, "Country"));
+            Song.add(new Songs(getString(R.string.shape_of_you), R.drawable.shape_of_you, getString(R.string.ed_sheeran), 2017, getString(R.string.pop)));
+            Song.add(new Songs(getString(R.string.hello), R.drawable.hello, getString(R.string.adele), 2015, getString(R.string.soul)));
+            Song.add(new Songs(getString(R.string.lovers), R.drawable.david_guetta, getString(R.string.david), 2014, getString(R.string.country)));
         } else if (Language.equals(getString(R.string.hindi))) {
             setTitle(getString(R.string.hindi_songs));
-            Song.add(new Songs("Manwa Laage", R.drawable.manwalaage, "Arijit Singh, Shreya Ghoshal", 2014, "Filmy"));
-            Song.add(new Songs("Kala Chashma", R.drawable.kala_chasma, "Neha Kakkar, Badshah, Amar Arshi", 2016, "Filmy"));
+            Song.add(new Songs(getString(R.string.manwaLaage), R.drawable.manwalaage, getString(R.string.arjit), 2014, getString(R.string.filmy)));
+            Song.add(new Songs(getString(R.string.kala), R.drawable.kala_chasma, getString(R.string.neha), 2016, getString(R.string.filmy)));
         } else if (Language.equals(getString(R.string.tamil))) {
             setTitle(getString(R.string.tamil_songs));
-            Song.add(new Songs("Nenjukkul Peidhidum", R.drawable.nenjukkul_peidhidum, "Hariharan", 2008, "SoundTrack"));
-            Song.add(new Songs("Maacho", R.drawable.macho, "Sid Sriram, Shweta Mohan", 2017, "Filmy"));
-            Song.add(new Songs("Halena", R.drawable.irumugan, "Abhay Jodhpurkar, Christopher Stanley", 2016, "Filmy"));
+            Song.add(new Songs(getString(R.string.nenjukul), R.drawable.nenjukkul_peidhidum, getString(R.string.hariharan), 2008, getString(R.string.soundtrack)));
+            Song.add(new Songs(getString(R.string.maacho), R.drawable.macho, getString(R.string.sid), 2017, getString(R.string.filmy)));
+            Song.add(new Songs(getString(R.string.halena), R.drawable.irumugan, getString(R.string.abhay), 2016, getString(R.string.filmy)));
         }
         SongAdapter itemadapter = new SongAdapter(this, Song);
 

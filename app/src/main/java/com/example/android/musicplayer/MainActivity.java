@@ -34,17 +34,17 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         switch (view.getId()) {
             case R.id.English:
                 songNameActivity = new Intent(MainActivity.this, SongsActivity.class);
-                songNameActivity.putExtra("lang", "English");
+                songNameActivity.putExtra(getString(R.string.language), getString(R.string.english));
                 startActivity(songNameActivity);
                 break;
             case R.id.Hindi:
                 songNameActivity = new Intent(MainActivity.this, SongsActivity.class);
-                songNameActivity.putExtra("lang", "Hindi");
+                songNameActivity.putExtra(getString(R.string.language), getString(R.string.hindi));
                 startActivity(songNameActivity);
                 break;
             case R.id.Tamil:
                 songNameActivity = new Intent(MainActivity.this, SongsActivity.class);
-                songNameActivity.putExtra("lang", "Tamil");
+                songNameActivity.putExtra(getString(R.string.language), getString(R.string.tamil));
                 startActivity(songNameActivity);
                 break;
         }

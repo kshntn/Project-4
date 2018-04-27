@@ -20,6 +20,7 @@ public class DetailsActivity extends AppCompatActivity {
     TextView release;
     TextView genres;
     int flag = 0;
+    ImageView playButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,13 +39,12 @@ public class DetailsActivity extends AppCompatActivity {
             genre = "";
             ReleaseYear = 0;
         }
-        Toast.makeText(this, "Now Playing: " + songName, Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, getString(R.string.nowPlayingDisplay) + " " + songName, Toast.LENGTH_SHORT).show();
         art = findViewById(R.id.imageDetails);
         art.setImageResource(image);
 
         song = findViewById(R.id.name);
         song.setText(songName);
-
 
         artistName = findViewById(R.id.artist);
         artistName.setText(getString(R.string.artistDisplay) + " " + artist);
@@ -59,11 +59,11 @@ public class DetailsActivity extends AppCompatActivity {
 
     public void play(View v) {
         if (flag == 0) {
-            ImageView playButton = findViewById(R.id.play);
+            playButton = findViewById(R.id.play);
             playButton.setImageResource(R.drawable.ic_play_arrow);
             flag = 1;
         } else if (flag == 1) {
-            ImageView playButton = findViewById(R.id.play);
+            playButton = findViewById(R.id.play);
             playButton.setImageResource(R.drawable.ic_pause);
             flag = 0;
             Toast.makeText(this, getString(R.string.nowPlayingDisplay) + " " + songName, Toast.LENGTH_SHORT).show();
